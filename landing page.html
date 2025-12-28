@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOVA LUXE | Excellence in Healthcare</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root { 
+            --navy: #0f172a; 
+            --accent: #0ea5e9; 
+            --medical-blue: #2563eb;
+            --soft-bg: #f8fafc;
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy); background-color: #fff; overflow-x: hidden; }
+        .serif { font-family: 'Instrument Serif', serif; }
+        .text-accent { color: var(--accent); }
+
+        /* --- Luxury Navbar --- */
+        .navbar { padding: 25px 0; background: rgba(255,255,255,0.8) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-link { font-weight: 700; color: var(--navy) !important; font-size: 0.85rem; letter-spacing: 1px; }
+
+        /* --- Hero Section (The "Global" Look) --- */
+        #hero { 
+            min-height: 100vh; display: flex; align-items: center;
+            background: radial-gradient(circle at 80% 20%, #e0f2fe 0%, #ffffff 50%);
+            padding-top: 80px;
+        }
+        .hero-visual {
+            position: relative; border-radius: 60px; overflow: hidden;
+            box-shadow: 0 60px 100px rgba(15, 23, 42, 0.15);
+        }
+
+        /* --- Modern Service Cards --- */
+        .service-card {
+            border: none; border-radius: 40px; padding: 45px;
+            background: #fff; transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            border: 1px solid #f1f5f9; height: 100%;
+        }
+        .service-card:hover { 
+            transform: translateY(-15px); 
+            box-shadow: 0 40px 70px rgba(14, 165, 233, 0.12);
+            border-color: var(--accent);
+        }
+        .icon-wrap { 
+            width: 70px; height: 70px; background: #f0f9ff; color: var(--accent); 
+            border-radius: 22px; display: flex; align-items: center; justify-content: center; 
+            font-size: 2rem; margin-bottom: 30px;
+        }
+
+        /* --- Testimonials Section --- */
+        .review-card {
+            background: #fff; border-radius: 30px; padding: 40px;
+            border: 1px solid #f1f5f9; position: relative;
+        }
+        .review-card img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+        .quote-icon { position: absolute; top: 30px; right: 30px; font-size: 3rem; color: #f1f5f9; }
+
+        /* --- Futuristic Section --- */
+        #tech-showcase { 
+            background: var(--navy); color: #fff; padding: 120px 0; 
+            border-radius: 80px 80px 0 0; margin-top: 100px;
+        }
+
+        /* --- Form Styling --- */
+        .booking-glass {
+            background: #fff; border-radius: 50px; padding: 60px;
+            box-shadow: 0 50px 120px rgba(0,0,0,0.1);
+            margin-top: -200px; position: relative; z-index: 100;
+        }
+        .form-control { 
+            padding: 18px 25px; border-radius: 18px; border: 1px solid #e2e8f0; background: #f8fafc;
+        }
+
+        /* --- Floating Doctor Card --- */
+        .doc-float {
+            border-radius: 40px; overflow: hidden; position: relative;
+            height: 450px; transition: 0.6s ease;
+        }
+        .doc-float img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .doc-float:hover img { transform: scale(1.1); filter: brightness(0.7); }
+        .doc-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0; padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff; transform: translateY(20px); opacity: 0; transition: 0.4s;
+        }
+        .doc-float:hover .doc-overlay { transform: translateY(0); opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-extrabold fs-3 d-flex align-items-center gap-2" href="#">
+                <span style="color: var(--medical-blue);"><i class="bi bi-crosshair"></i></span>
+                NOVA <span class="fw-light">LUXE</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="#hero">INSTITUTE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">SPECIALTIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctors">OUR BOARD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">ADMISSION</a></li>
+                </ul>
+            </div>
+            <a href="#booking" class="btn btn-primary rounded-pill px-4 fw-bold">BOOK EVALUATION</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="text-accent fw-bold mb-3"><i class="bi bi-stars"></i> WORLD-CLASS MEDICAL FACILITY</h6>
+                    <h1 class="display-2 fw-extrabold mb-4">Precision Medicine <br> <span class="serif italic text-primary">Redefined.</span></h1>
+                    <p class="fs-5 text-muted mb-5">Experience the pinnacle of diagnostic excellence and patient-centric care at the Middle East's most advanced healthcare hub.</p>
+                    <div class="d-flex gap-3">
+                        <div class="d-flex align-items-center gap-3 bg-white p-3 rounded-pill shadow-sm border">
+                            <i class="bi bi-telephone-fill text-accent fs-4"></i>
+                            <span class="fw-bold">+20 111 080 4209</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <div class="hero-visual">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200" class="w-100" alt="Modern Clinic">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold">Clinical Specializations</h2>
+                <p class="text-muted">High-standard medical care across all essential departments</p>
+                <div class="bg-accent mx-auto mt-3" style="width: 80px; height: 4px; border-radius: 2px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card border-danger-subtle bg-danger-subtle bg-opacity-10">
+                        <div class="icon-wrap" style="background: #fee2e2; color: #ef4444;"><i class="bi bi-hospital"></i></div>
+                        <h4 class="fw-bold">Emergency & Trauma</h4>
+                        <p class="text-muted small">24/7 urgent care for critical cases, equipped with modern ICU units and fully-equipped ambulances for immediate response.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="icon-wrap" style="background: #f0fdf4; color: #22c55e;"><i class="bi bi-person-walking"></i></div>
+                        <h4 class="fw-bold">Physiotherapy & Rehab</h4>
+                        <p class="text-muted small">Specialized rehabilitation for sports injuries, spine problems, and post-surgery recovery using advanced therapeutic exercises.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="icon-wrap"><i class="bi bi-scan"></i></div>
+                        <h4 class="fw-bold">Radiology & Imaging</h4>
+                        <p class="text-muted small">Comprehensive diagnostic unit featuring MRI, CT scans, and 4D Ultrasound to ensure fast and accurate clinical results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="icon-wrap" style="color: #6366f1; background: #eef2ff;"><i class="bi bi-vignette"></i></div>
+                        <h4 class="fw-bold">Dental Care Center</h4>
+                        <p class="text-muted small">Professional services ranging from routine cleaning and whitening to dental implants and cosmetic veneers using digital technology.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="icon-wrap" style="color: #f59e0b; background: #fffbeb;"><i class="bi bi-thermometer-half"></i></div>
+                        <h4 class="fw-bold">Laboratory Services</h4>
+                        <p class="text-muted small">Full medical check-ups, comprehensive blood tests, and genetic analysis performed under the supervision of expert consultants.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="icon-wrap" style="color: #ec4899; background: #fdf2f8;"><i class="bi bi-heart-pulse"></i></div>
+                        <h4 class="fw-bold">Cardiology Unit</h4>
+                        <p class="text-muted small">Expert heart monitoring, blood pressure management, and stress tests (ECG/Echo) to prevent and treat cardiovascular diseases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="doctors" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="display-4 fw-bold text-center mb-5">The Medical Board</h2>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="doc-float">
+                        <img src="doctor.jpg" alt="Doctor">
+                        <div class="doc-overlay">
+                            <h4>Dr. john Sterling</h4>
+                            <p class="small">Head of Neurosurgery | Oxford Fellow</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="doc-float">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800" alt="Doctor">
+                        <div class="doc-overlay">
+                            <h4>Dr. Elena Rodriguez</h4>
+                            <p class="small">Director of Oncology | Harvard Medical</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doc-float">
+                        <img src="nurse.jpg" alt="Doctor">
+                        <div class="doc-overlay">
+                            <h4>Dr. Mark Harrison</h4>
+                            <p class="small">Chief Surgeon | Robotic Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold text-center mb-5 serif italic">Voices of Recovery</h2>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="review-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="text-muted mb-4">"The technology here is unlike anything I've seen. My recovery after the robotic surgery was remarkably fast and painless."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://i.pravatar.cc/150?u=1" alt="User">
+                            <div><h6 class="mb-0 fw-bold">Sarah Williams</h6><small class="text-accent">Post-Op Patient</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="review-card shadow-lg" style="border-color: var(--accent);">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="text-muted mb-4">"Absolutely professional. From the initial MRI to the final evaluation, the team was precise and extremely compassionate."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://i.pravatar.cc/150?u=2" alt="User">
+                            <div><h6 class="mb-0 fw-bold">Robert jounior</h6><small class="text-accent">Diagnostic Unit</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="review-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="text-muted mb-4">"The Physiotherapy department helped me regain full mobility in just 3 weeks after a major sports injury. Highly recommended."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://i.pravatar.cc/150?u=3" alt="User">
+                            <div><h6 class="mb-0 fw-bold">mia rider</h6><small class="text-accent">Physio Patient</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-showcase">
+        <div class="container text-center py-5">
+            <h2 class="display-3 fw-bold mb-4">Leading the Future.</h2>
+            <p class="opacity-75 fs-5 col-lg-7 mx-auto">We don't just treat; we innovate. Our center is a global pilot for AI-assisted surgical precision.</p>
+        </div>
+        <div style="height: 200px;"></div>
+    </section>
+
+    <section id="booking" class="container pb-5">
+        <div class="booking-glass" data-aos="zoom-in">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="display-4 fw-bold mb-4">Schedule Your <br> Evaluation.</h2>
+                    <p class="text-muted mb-5">Your medical journey starts here. Secure your slot with one of our specialized consultants.</p>
+                    <div class="alert alert-info border-0 rounded-pill px-4">
+                        <strong>Fast Track:</strong> Response within 10 Minutes.
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form onsubmit="event.preventDefault(); alert('Success! Our Medical Board will contact you shortly.')">
+                        <div class="row g-3">
+                            <div class="col-md-6"><input type="text" class="form-control" placeholder="Patient Name" required></div>
+                            <div class="col-md-6"><input type="tel" class="form-control" placeholder="Contact Number" required></div>
+                            <div class="col-md-6">
+                                <select class="form-select form-control">
+                                    <option selected>Select Unit</option>
+                                    <option>Emergency Care</option>
+                                    <option>Robotic Surgery</option>
+                                    <option>Physiotherapy</option>
+                                    <option>Dentistry</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6"><input type="date" class="form-control"></div>
+                            <div class="col-12"><textarea class="form-control" rows="4" placeholder="Brief Medical History"></textarea></div>
+                            <div class="col-12"><button class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow">CONFIRM REGISTRATION</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container py-5 border-top border-secondary">
+            <div class="text-center">
+                <h2 class="fw-bold mb-4">NOVA LUXE</h2>
+                <div class="d-flex justify-content-center gap-4 mb-5">
+                    <a href="https://www.linkedin.com/in/mohamed-hassan-972556388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                   <a href="mailto:m.soliman5915@su.edu.eg.com" class="text-white fs-4">
+   <i class="bi bi-envelope-at"></i>
+</a>
+                    <a href="https://www.instagram.com/mohamed_hassan543?igsh=MTc2M2Jlc3lnNzZ4eA==" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                </div>
+                <p class="small text-secondary">© 2025 NOVA LUXE MEDICAL GLOBAL. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
